@@ -1,0 +1,17 @@
+def max_elements(arr1, arr2):
+    return [max(a, b) for a, b in zip(arr1, arr2)]
+
+size = int(input("Введите размер массивов: "))
+
+arr1 = []
+print(f"Введите {size} элементов для первого массива:")
+for _ in range(size):
+    arr1.append(int(input()))
+
+arr2 = []
+print(f"Введите {size} элементов для второго массива:")
+for _ in range(size):
+    arr2.append(int(input()))
+
+arr3 = max_elements(arr1, arr2)
+print("Третий массив:", arr3)
