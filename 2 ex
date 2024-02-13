@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    int k;
+    std::cout << "Введите целое число k (1 <= k <= 180): ";
+    std::cin >> k;
+
+    if (k < 1 || k > 180) {
+        std::cout << "Число k вне допустимого диапазона." << std::endl;
+        return 1;
+    }
+
+    std::string sequence;
+    for (int i = 10; i <= 99; ++i) {
+        sequence += std::to_string(i);
+    }
+
+    if (k <= sequence.length()) {
+        std::cout << "Пара цифр, содержащая " << k << "-ю цифру: " << sequence[k - 1] << sequence[k] << std::endl;
+    } else {
+        std::cout << "Число k превышает количество цифр в последовательности." << std::endl;
+    }
+
+    return 0;
+}
