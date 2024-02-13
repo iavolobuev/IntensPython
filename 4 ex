@@ -1,0 +1,22 @@
+#include <iostream>
+
+int nod(int a, int b){
+    while ((a>0)&&(b>0)){
+        if(a>b)
+            a=a-b;
+        else
+            b=b-a;
+    }
+    return a>b?a:b;
+}
+int main() {
+    int num1,num2;
+    
+    std::cin>> num1 >> num2;
+    int res=nod(num1,num2);
+    int r1=num1/res;
+    int r2=num2/res;
+    std::cout<<r1<<"/"<<r2;
+    
+    return 0;
+}
