@@ -1,0 +1,16 @@
+import math
+
+e = int(input('Enter number: '))
+f = int(input('Enter number: '))
+g = int(input('Enter number: '))
+
+
+def calculate_abc(k,e,f,g):
+    a = math.sqrt(k-e2)/ (f2+g)
+    b= math.sin(e+f**2)
+    c=(22*g) / (e*f-2)
+    return a,b,c
+
+for k in range(1,181):
+    a,b,c = calculate_abc(k, e, f, g)
+    print(f'For k = {k}:a={a}:b={b}:c={c}')
